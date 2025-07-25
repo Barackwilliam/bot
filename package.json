@@ -1,0 +1,41 @@
+{
+  "name": "advanced-whatsapp-bot",
+  "version": "2.0.0",
+  "description": "Advanced WhatsApp Bot with multiple features",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "automation",
+    "baileys"
+  ],
+  "author": "NyumbaChap",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^6.6.0",
+    "axios": "^1.11.0",
+    "cheerio": "^1.1.2",
+    "express": "^5.1.0",
+    "fs-extra": "^11.3.0",
+    "moment": "^2.30.1",
+    "node-cron": "^4.2.1",
+    "node-fetch": "^3.3.2",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.32.6",
+    "sqlite3": "^5.1.6",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0",
+    "ytdl-core": "^4.11.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

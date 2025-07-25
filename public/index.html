@@ -1,0 +1,32 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Deploy WhatsApp Bot</title>
+</head>
+<body>
+  <h2>Start Your WhatsApp Bot</h2>
+  <form onsubmit="startBot(event)">
+    <input type="text" id="number" placeholder="Enter WhatsApp number e.g. 255712345678" required>
+    <button type="submit">Start Bot</button>
+  </form>
+  <div id="qr"></div>
+
+  <script>
+    async function startBot(event) {
+      event.preventDefault();
+      const number = document.getElementById('number').value;
+      const res = await fetch('/start-bot', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ number })
+      });
+      const qrDiv = document.getElementById('qr');
+      qrDiv.innerHTML = `<p>Loading QR Code...</p>`;
+      setTimeout(() => {
+        qrDiv.innerHTML = `<iframe src="/qr/${number}" width="320" height="400"></iframe>`;
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
